@@ -45,6 +45,16 @@ namespace Datos
 
         }
 
+        public static bool BorrarUsuario(Usuario user)
+        {
+            using (ApiEmaContext db = new ApiEmaContext())
+            {
+                db.Remove(user);
+                db.SaveChanges();
+                return true;
+            }
+        }
+
         
     }
 }
