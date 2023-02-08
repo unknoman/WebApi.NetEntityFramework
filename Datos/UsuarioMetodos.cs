@@ -8,7 +8,7 @@ namespace Datos
     public static class UsuarioMetodos
     {
 
-        public static List<Usuario> ListarUsuarios()
+        public static List<Usuario> listarUsuarios()
         {
             List<Usuario> usuarios = new List<Usuario>();
             using (ApiEmaContext db = new ApiEmaContext())
@@ -16,7 +16,7 @@ namespace Datos
                 var list1 = db.Usuarios;
                 foreach (var usuario1 in list1)
                 {
-                    usuario1.IdtipoNavigation = ListarTipo(usuario1);
+                    usuario1.IdtipoNavigation = listarTipo(usuario1);
                     usuarios.Add(usuario1);
                 }
             }
@@ -25,7 +25,7 @@ namespace Datos
         }
 
 
-        public static Tipouser ListarTipo(Usuario user)
+        public static Tipouser listarTipo(Usuario user)
         {
             List<Tipouser> lista = new List<Tipouser>();
             Tipouser tipo = new Tipouser();
@@ -45,7 +45,7 @@ namespace Datos
 
         }
 
-        public static bool BorrarUsuario(Usuario user)
+        public static bool borrarUsuario(Usuario user)
         {
             using (ApiEmaContext db = new ApiEmaContext())
             {
@@ -55,6 +55,17 @@ namespace Datos
             }
         }
 
-        
+
+        public static bool crearUsuario(Usuario user)
+        {
+            using (ApiEmaContext db = new ApiEmaContext())
+            {
+                db.Add(user);
+                db.SaveChanges();
+                return true;
+            }
+        }
+
+
     }
 }

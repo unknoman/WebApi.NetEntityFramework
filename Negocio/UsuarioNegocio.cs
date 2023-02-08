@@ -8,10 +8,11 @@ namespace Negocio
         public static List<Usuario> ListarUsuarios()
         {
             List<Usuario> usuarios = new List<Usuario>();
-            usuarios = UsuarioMetodos.ListarUsuarios();
+            usuarios = UsuarioMetodos.listarUsuarios();
             return usuarios;
         }
 
+   
 
     }
 }
