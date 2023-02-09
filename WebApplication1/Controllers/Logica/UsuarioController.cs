@@ -17,5 +17,8 @@ namespace WebApplication1.Controllers.Logica
             return usuarios.Select(us => new {us.Idusuario, us.Usuario1, us.Password, us.IdtipoNavigation.Idtipo, us.IdtipoNavigation.Tipo});
 
         }
+
+
+
     }
 }

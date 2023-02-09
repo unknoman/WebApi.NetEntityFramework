@@ -38,10 +38,11 @@ namespace Datos
                 }
 
                     tipo = lista.Find(t => t.Idtipo == user.Idtipo);
+               
                     
             }
+                return tipo;
 
-            return tipo;
 
         }
 

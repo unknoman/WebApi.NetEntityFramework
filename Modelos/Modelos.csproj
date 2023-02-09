@@ -6,10 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Datos\Datos.csproj" />
-    <ProjectReference Include="..\Negocio\Negocio.csproj" />
-    <ProjectReference Include="..\WebApplication1\WebApiEma.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Microsoft.IdentityModel.Tokens;
 using WebApplication1.Modelos;
 
 namespace Negocio
@@ -12,7 +13,26 @@ namespace Negocio
             return usuarios;
         }
 
-   
+        public static bool borrarUsuario(Usuario user)
+        {
+            UsuarioMetodos.borrarUsuario(user);
+            return true;
+        }
+
+
+        public static bool crearUsuario(Usuario user)
+        {
+           if(String.IsNullOrEmpty(user.Usuario1))
+            {
+                return false;
+            }
+            if (String.IsNullOrEmpty(user.Password))
+            {
+                return false;
+            }
+            UsuarioMetodos.crearUsuario(user);
+            return true;
+        }
 
     }
 }

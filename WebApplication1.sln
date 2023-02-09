@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datos", "Datos\Datos.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Negocio", "Negocio\Negocio.csproj", "{1CBEE37D-C2D2-45C2-B328-466B0451BCCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelos", "Modelos\Modelos.csproj", "{944B5EE5-B17C-4B32-9F99-337A3EC96E45}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{1CBEE37D-C2D2-45C2-B328-466B0451BCCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CBEE37D-C2D2-45C2-B328-466B0451BCCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CBEE37D-C2D2-45C2-B328-466B0451BCCC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{944B5EE5-B17C-4B32-9F99-337A3EC96E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{944B5EE5-B17C-4B32-9F99-337A3EC96E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{944B5EE5-B17C-4B32-9F99-337A3EC96E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{944B5EE5-B17C-4B32-9F99-337A3EC96E45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
