@@ -16,7 +16,6 @@ namespace Datos
                 var list1 = db.Usuarios;
                 foreach (var usuario1 in list1)
                 {
-                    usuario1.IdtipoNavigation = listarTipo(usuario1);
                     usuarios.Add(usuario1);
                 }
             }
@@ -25,24 +24,7 @@ namespace Datos
         }
 
 
-        public static Tipouser listarTipo(Usuario user)
-        {
-            List<Tipouser> lista = new List<Tipouser>();
-            Tipouser tipo = new Tipouser();
-            using (ApiEmaContext db = new ApiEmaContext())
-            {
-                var list1 = db.Tipousers;
-                foreach (var tipos in list1)
-                {         
-                    lista.Add(tipos);
-                }
 
-                    tipo = lista.Find(t => t.Idtipo == user.Idtipo);
-            }
-                return tipo;
-
-
-        }
 
         public static bool borrarUsuario(Usuario user)
         {
