@@ -62,6 +62,10 @@ public partial class ApiEmaContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("USUARIO");
 
+            entity.HasOne(d => d.IdtipoNavigation).WithMany(p => p.Usuarios)
+                .HasForeignKey(d => d.Idtipo)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__USUARIO__IDTIPO__267ABA7A");
         });
 
         OnModelCreatingPartial(modelBuilder);

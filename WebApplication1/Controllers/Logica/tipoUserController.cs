@@ -28,7 +28,10 @@ namespace WebApiEma.Controllers.Logica
         [Route("actualizartipo")]
         public dynamic actualizarTipo(Tipouser tipoActualizado)
         {
-            return TipoUserNegocio.actualizarTipo(tipoActualizado);
+                return TipoUserNegocio.actualizarTipo(tipoActualizado);
+
+
+
         }
 
     }

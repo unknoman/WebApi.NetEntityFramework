@@ -38,13 +38,13 @@ namespace Negocio
 
         public static bool actualizarTipo(Tipouser tipoActualizado)
         {
-            if( tipoActualizado != null)
+            if(!String.IsNullOrEmpty(tipoActualizado.Tipo))
             {
                 tiposUserMetodos.actualizarTipo(tipoActualizado);
                 return true;
             } else
             {
-                return false;
+                return false; 
             }    
         }
      

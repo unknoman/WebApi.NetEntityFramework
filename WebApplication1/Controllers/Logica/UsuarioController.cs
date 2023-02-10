@@ -22,6 +22,7 @@ namespace WebApplication1.Controllers.Logica
 
         [HttpPost]
         [Route("crear")]
+
         public dynamic crearUsuario(Usuario user)
         {
             bool resultado = UsuarioNegocio.crearUsuario(user);
