@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace WebApplication1.Modelos;
 
@@ -9,5 +10,6 @@ public partial class Tipouser
 
     public string Tipo { get; set; } = null!;
 
+    [JsonIgnore]
     public virtual ICollection<Usuario> Usuarios { get; } = new List<Usuario>();
 }
