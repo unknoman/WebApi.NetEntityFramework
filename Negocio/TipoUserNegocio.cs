@@ -4,6 +4,8 @@ using WebApplication1.Modelos;
 
 namespace Negocio
 {
+
+    // Estos son los metodos de los roles de los usuarios
     public static class TipoUserNegocio
     {
         public static List<Tipouser> ListarTipoUsuarios()
@@ -13,12 +15,39 @@ namespace Negocio
             return tipoUsuarios;
         }
 
-        public static Tipouser ListarUsuariosId(int id)
+        public static Tipouser ListarUsuarios(int id)
         {
             Tipouser tipoUsuariosId = new Tipouser();
-            tipoUsuariosId = tiposUserMetodos.listarTipoId(id);
+            tipoUsuariosId = tiposUserMetodos.listarTipo(id);
             return tipoUsuariosId;
         }
+
+        // agregar en main 
+        public static bool eliminarTipo(Tipouser tipo)
+        {
+            if(tipo != null)
+            {
+               return tiposUserMetodos.eliminarTipo(tipo);
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+
+        public static bool actualizarTipo(Tipouser tipoActualizado)
+        {
+            if( tipoActualizado != null)
+            {
+                tiposUserMetodos.actualizarTipo(tipoActualizado);
+                return true;
+            } else
+            {
+                return false;
+            }    
+        }
+     
 
 
     }

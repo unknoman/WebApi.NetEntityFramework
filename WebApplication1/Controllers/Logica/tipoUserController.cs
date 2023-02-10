@@ -20,10 +20,16 @@ namespace WebApiEma.Controllers.Logica
         public dynamic listarTipoUserid(int id)
         {
             Tipouser usuarioTipo = new Tipouser();
-            usuarioTipo = TipoUserNegocio.ListarUsuariosId(id);
+            usuarioTipo = TipoUserNegocio.ListarUsuarios(id);
             return usuarioTipo;
         }
 
+        [HttpPost]
+        [Route("actualizartipo")]
+        public dynamic actualizarTipo(Tipouser tipoActualizado)
+        {
+            return TipoUserNegocio.actualizarTipo(tipoActualizado);
+        }
 
     }
 }
