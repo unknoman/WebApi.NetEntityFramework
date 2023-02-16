@@ -34,16 +34,16 @@ namespace WebApiEma.Controllers.Logica
 
         [HttpPost]
         [Route("creartipo")]
-        public dynamic crearTipo(Tipouser tipo)
+        public dynamic crearTipo(Tipouser tipoRol)
         {
-            return TipoUserNegocio.crearTipo(tipo);
+            return TipoUserNegocio.crearTipo(tipoRol);
         }
 
         [HttpPost]
         [Route("eliminartipo")]
-        public dynamic eliminarTipo(Tipouser tipo)
+        public dynamic eliminarTipo(Tipouser tipoRol)
         {
-            return TipoUserNegocio.eliminarTipo(tipo);
+            return TipoUserNegocio.eliminarTipo(tipoRol);
         }
     }
 }
