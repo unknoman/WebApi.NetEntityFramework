@@ -16,7 +16,7 @@ namespace WebApiEma.Controllers.Logica
         }
 
         [HttpPost]
-        [Route("listartipo")]
+        [Route("listartipoID")]
         public dynamic listarTipoUserid(int id)
         {
             Tipouser usuarioTipo = new Tipouser();
