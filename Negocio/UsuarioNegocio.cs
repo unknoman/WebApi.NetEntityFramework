@@ -34,5 +34,19 @@ namespace Negocio
             return true;
         }
 
+
+        public static bool actualizarUsuario(Usuario user)
+        {
+            if (String.IsNullOrEmpty(user.Usuario1))
+            {
+                return false;
+            }
+            if (String.IsNullOrEmpty(user.Password))
+            {
+                return false;
+            }
+            UsuarioMetodos.actualizarUsuario(user);
+            return true;
+        }
     }
 }

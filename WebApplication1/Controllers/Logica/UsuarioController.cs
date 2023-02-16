@@ -12,10 +12,9 @@ namespace WebApplication1.Controllers.Logica
         [Route("listar")]
         public dynamic listarUsuario()
         {
-            List<Usuario> usuarios= new List<Usuario>();
+            List<Usuario> usuarios = new List<Usuario>();
             usuarios = UsuarioNegocio.ListarUsuarios();
             return usuarios;
-          //  return usuarios.Select(us => new {us.Idusuario, us.Usuario1, us.Password, us.IdtipoNavigation.Idtipo, us.IdtipoNavigation.Tipo});
 
         }
 
@@ -39,7 +38,14 @@ namespace WebApplication1.Controllers.Logica
             return resultado;
         }
 
-
+        [HttpPost]
+        [Route("actualizar")]
+        public dynamic actualizarUsuario(Usuario user)
+        {
+            bool resultado = UsuarioNegocio.actualizarUsuario(user);
+            return resultado;
+        }
+       
 
 
 

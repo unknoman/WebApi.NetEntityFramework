@@ -71,7 +71,7 @@ namespace Datos
 
 
 
-        public static bool actualizarTipo(Tipouser tipoActualizado)
+       public static bool actualizarTipo(Tipouser tipoActualizado)
         {
             using (ApiEmaContext db = new ApiEmaContext())
             {
@@ -83,7 +83,7 @@ namespace Datos
             }
                 
         }
-
+     
 
 
 
