@@ -7,7 +7,7 @@ namespace WebApiEma.Controllers.Logica
     public class tipoUserController : Controller
     {
         [HttpGet]
-        [Route("listartipouser")]
+        [Route("listartipo")]
         public dynamic listarTipoUser()
         {
             List<Tipouser> lista = new List<Tipouser>();
@@ -16,7 +16,7 @@ namespace WebApiEma.Controllers.Logica
         }
 
         [HttpPost]
-        [Route("listartipouserid")]
+        [Route("listartipo")]
         public dynamic listarTipoUserid(int id)
         {
             Tipouser usuarioTipo = new Tipouser();
