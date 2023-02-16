@@ -30,9 +30,18 @@ namespace WebApiEma.Controllers.Logica
         {
                 return TipoUserNegocio.actualizarTipo(tipoActualizado);
 
-
-
         }
 
+
+        public dynamic crearTipo(Tipouser tipo)
+        {
+            return TipoUserNegocio.crearTipo(tipo);
+        }
+
+
+        public dynamic eliminarTipo(Tipouser tipo)
+        {
+            return TipoUserNegocio.eliminarTipo(tipo);
+        }
     }
 }

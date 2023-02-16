@@ -47,8 +47,20 @@ namespace Negocio
                 return false; 
             }    
         }
-     
 
+
+        public static bool crearTipo(Tipouser tipo)
+        {
+            if (!String.IsNullOrEmpty(tipo.Tipo))
+            {
+                tiposUserMetodos.crearTipo(tipo);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }
