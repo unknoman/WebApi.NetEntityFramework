@@ -5,7 +5,7 @@ using WebApplication1.Modelos;
 namespace WebApiEma.Controllers.Logica
 {
     [ApiController]
-    [Route("Roles")]
+    [Route("roles")]
     public class tipoUserController : Controller
     {
         [HttpGet]
