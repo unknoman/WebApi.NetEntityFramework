@@ -30,7 +30,7 @@ namespace WebApplication1.Controllers.Logica
 
 
 
-        [HttpPost]
+        [HttpDelete]
         [Route("borrar")]
         public dynamic borrarUsuario(Usuario user)
         {
@@ -38,7 +38,7 @@ namespace WebApplication1.Controllers.Logica
             return resultado;
         }
 
-        [HttpPost]
+        [HttpPut]
         [Route("actualizar")]
         public dynamic actualizarUsuario(Usuario user)
         {

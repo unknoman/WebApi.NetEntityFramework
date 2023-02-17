@@ -26,7 +26,7 @@ namespace WebApiEma.Controllers.Logica
             return usuarioTipo;
         }
 
-        [HttpPost]
+        [HttpPut]
         [Route("actualizartipo")]
         public dynamic actualizarTipo(Tipouser tipoActualizado)
         {
@@ -40,8 +40,8 @@ namespace WebApiEma.Controllers.Logica
         {
             return TipoUserNegocio.crearTipo(tipoRol);
         }
-
-        [HttpPost]
+        
+        [HttpDelete]
         [Route("eliminartipo")]
         public dynamic eliminarTipo(Tipouser tipoRol)
         {
