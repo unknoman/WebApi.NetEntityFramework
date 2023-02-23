@@ -17,7 +17,7 @@ namespace WebApiEma.Controllers.Logica
             return lista;
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("listartipoID")]
         public dynamic listarTipoUserid(int id)
         {

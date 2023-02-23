@@ -4,12 +4,12 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:42244",
+      "applicationUrl": "https://localhost:42244",
       "sslPort": 44391
     }
   },
   "profiles": {
-    "WebApplication1": {
+    "WebApiEma": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
