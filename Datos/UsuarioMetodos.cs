@@ -13,7 +13,7 @@ namespace Datos
             List<Usuario> usuarios = new List<Usuario>();
             using (ApiEmaContext db = new ApiEmaContext())
             {
-                var list1 = db.Usuarios;
+                var list1 = db.Usuarios.Include(t => t.IdtipoNavigation);
                 foreach (var usuario1 in list1)
                 {
                     usuarios.Add(usuario1);

@@ -21,6 +21,8 @@ builder.Services.AddCors(options =>
         
     });
 });
+
+builder.Services.AddAutoMapper(typeof(Program)); // automapper
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
