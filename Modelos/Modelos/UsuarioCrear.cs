@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace WebApplication1.Modelos;
 
-public partial class Usuario
+public partial class UsuarioCrear
 {
     public int Idusuario { get; set; }
 
@@ -15,11 +15,10 @@ public partial class Usuario
 
     public string Password { get; set; } = null!;
 
-    public virtual Tipouser? IdtipoNavigation { get; set; } = null!;
-
-    [JsonIgnore]
     public int Idtipo { get; set; }
 
+    [JsonIgnore]
+    public virtual Tipouser? IdtipoNavigation { get; set; } = null!;
 
     
 

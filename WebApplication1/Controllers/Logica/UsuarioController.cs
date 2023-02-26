@@ -21,8 +21,7 @@ namespace WebApplication1.Controllers.Logica
 
         [HttpPost]
         [Route("crear")]
-
-        public dynamic crearUsuario(Usuario user)
+        public dynamic crearUsuario(UsuarioCrear user)
         {
             bool resultado = UsuarioNegocio.crearUsuario(user);
             return resultado;
@@ -40,7 +39,7 @@ namespace WebApplication1.Controllers.Logica
 
         [HttpPut]
         [Route("actualizar")]
-        public dynamic actualizarUsuario(Usuario user)
+        public dynamic actualizarUsuario(UsuarioCrear user)
         {
             bool resultado = UsuarioNegocio.actualizarUsuario(user);
             return resultado;

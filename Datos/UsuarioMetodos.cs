@@ -37,7 +37,7 @@ namespace Datos
         }
 
 
-        public static bool crearUsuario(Usuario user)
+        public static bool crearUsuario(UsuarioCrear user)
         {
             using (ApiEmaContext db = new ApiEmaContext())
             {
@@ -48,11 +48,11 @@ namespace Datos
         }
 
 
-        public static bool actualizarUsuario(Usuario user)
+        public static bool actualizarUsuario(UsuarioCrear user)
         {
             using (ApiEmaContext db = new ApiEmaContext())
             {
-                Usuario usuario = new Usuario();
+                UsuarioCrear usuario = new UsuarioCrear();
                 usuario = user;
                 db.Update(usuario);
                 db.SaveChanges();

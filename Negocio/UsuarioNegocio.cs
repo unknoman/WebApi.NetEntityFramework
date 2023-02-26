@@ -20,7 +20,7 @@ namespace Negocio
         }
 
 
-        public static bool crearUsuario(Usuario user)
+        public static bool crearUsuario(UsuarioCrear user)
         {
            if(String.IsNullOrEmpty(user.Usuario1))
             {
@@ -35,7 +35,7 @@ namespace Negocio
         }
 
 
-        public static bool actualizarUsuario(Usuario user)
+        public static bool actualizarUsuario(UsuarioCrear user)
         {
             if (String.IsNullOrEmpty(user.Usuario1))
             {
