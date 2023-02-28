@@ -14,6 +14,7 @@ namespace Datos
             using (ApiEmaContext db = new ApiEmaContext())
             {
                 var list1 = db.Usuarios.Include(t => t.IdtipoNavigation);
+
                 foreach (var usuario1 in list1)
                 {
                     usuarios.Add(usuario1);
@@ -41,23 +42,29 @@ namespace Datos
         {
             using (ApiEmaContext db = new ApiEmaContext())
             {
-                db.Add(user);
+                Usuario usuario = new Usuario();
+                usuario.Idusuario = user.Idusuario;
+                usuario.Usuario1 = user.Usuario1;
+                usuario.Password = user.Password;
+                usuario.Idtipo = user.Idtipo;
+                db.Add(usuario);
                 db.SaveChanges();
                 return true;
             }
         }
 
 
-        public static bool actualizarUsuario(UsuarioCrear user)
+        public static bool actualizarUsuario(Usuario user)
         {
             using (ApiEmaContext db = new ApiEmaContext())
             {
-                UsuarioCrear usuario = new UsuarioCrear();
+                Usuario usuario = new Usuario();
                 usuario = user;
                 db.Update(usuario);
                 db.SaveChanges();
                 return true;
             }
         }
+
     }
 }

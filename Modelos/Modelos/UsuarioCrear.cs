@@ -20,7 +20,11 @@ public partial class UsuarioCrear
     [JsonIgnore]
     public virtual Tipouser? IdtipoNavigation { get; set; } = null!;
 
-    
+ 
+
+
+
+
 
 
 }

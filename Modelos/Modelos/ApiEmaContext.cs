@@ -66,6 +66,8 @@ public partial class ApiEmaContext : DbContext
                 .HasForeignKey(d => d.Idtipo)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__USUARIO__IDTIPO__267ABA7A");
+
+
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -39,7 +39,7 @@ namespace WebApplication1.Controllers.Logica
 
         [HttpPut]
         [Route("actualizar")]
-        public dynamic actualizarUsuario(UsuarioCrear user)
+        public dynamic actualizarUsuario(Usuario user)
         {
             bool resultado = UsuarioNegocio.actualizarUsuario(user);
             return resultado;

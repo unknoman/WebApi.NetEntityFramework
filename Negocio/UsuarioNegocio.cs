@@ -35,7 +35,7 @@ namespace Negocio
         }
 
 
-        public static bool actualizarUsuario(UsuarioCrear user)
+        public static bool actualizarUsuario(Usuario user)
         {
             if (String.IsNullOrEmpty(user.Usuario1))
             {
