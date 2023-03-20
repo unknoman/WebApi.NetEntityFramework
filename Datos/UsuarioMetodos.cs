@@ -44,13 +44,23 @@ namespace Datos
         {
             using (ApiEmaContext db = new ApiEmaContext())
             {
-                Usuario usuario = new Usuario();
-                usuario.Usuario1 = user.Usuario1;
-                usuario.Password = user.Password;
-                usuario.Idtipo = user.Idtipo;
-                db.Add(usuario);
-                db.SaveChanges();
-                return true;
+                try
+                {
+                    Usuario usuario = new Usuario();
+                    usuario.Usuario1 = user.Usuario1;
+                    usuario.Password = user.Password;
+                    usuario.Idtipo = user.Idtipo;
+                    db.Add(usuario);
+                   int verificacion = db.SaveChanges();
+                    if (verificacion > 0)
+                        return true;
+                    else
+                        return false;
+                } catch (Exception)
+                {
+                        return false;
+                }
+
             }
         }
 
