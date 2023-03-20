@@ -28,12 +28,11 @@ namespace WebApplication1.Controllers.Logica
         }
 
 
-
         [HttpDelete]
         [Route("borrar")]
-        public dynamic borrarUsuario(Usuario user)
+        public dynamic borrarUsuario(int id)
         {
-            bool resultado = UsuarioNegocio.borrarUsuario(user);
+            bool resultado = UsuarioNegocio.borrarUsuario(id);
             return resultado;
         }
 

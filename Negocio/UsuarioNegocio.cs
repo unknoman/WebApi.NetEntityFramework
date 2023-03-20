@@ -13,9 +13,9 @@ namespace Negocio
             return usuarios;
         }
 
-        public static bool borrarUsuario(Usuario user)
+        public static bool borrarUsuario(int id)
         {
-            UsuarioMetodos.borrarUsuario(user);
+            UsuarioMetodos.borrarUsuario(id);
             return true;
         }
 

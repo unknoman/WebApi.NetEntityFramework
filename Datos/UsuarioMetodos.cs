@@ -27,10 +27,12 @@ namespace Datos
 
 
 
-        public static bool borrarUsuario(Usuario user)
+        public static bool borrarUsuario(int id)
         {
             using (ApiEmaContext db = new ApiEmaContext())
             {
+                Usuario user = new Usuario();
+                user.Idusuario = id;
                 db.Remove(user);
                 db.SaveChanges();
                 return true;
@@ -43,7 +45,6 @@ namespace Datos
             using (ApiEmaContext db = new ApiEmaContext())
             {
                 Usuario usuario = new Usuario();
-                usuario.Idusuario = user.Idusuario;
                 usuario.Usuario1 = user.Usuario1;
                 usuario.Password = user.Password;
                 usuario.Idtipo = user.Idtipo;
