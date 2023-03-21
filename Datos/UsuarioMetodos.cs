@@ -51,8 +51,8 @@ namespace Datos
                     usuario.Password = user.Password;
                     usuario.Idtipo = user.Idtipo;
                     db.Add(usuario);
-                    db.SaveChanges();
-                    return true;
+                   int verificacion = db.SaveChanges();
+                    return false;
                 } catch (Exception)
                 {
                         return false;

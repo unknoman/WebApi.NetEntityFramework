@@ -22,15 +22,16 @@ namespace Negocio
 
         public static bool crearUsuario(UsuarioCrear user)
         {
-
-           if(String.IsNullOrEmpty(user.Usuario1) && String.IsNullOrEmpty(user.Password))
+           if(String.IsNullOrEmpty(user.Usuario1))
             {
                 return false;
-            } else
-            {
-                return UsuarioMetodos.crearUsuario(user);
             }
-           
+            if (String.IsNullOrEmpty(user.Password))
+            {
+                return false;
+            }
+            UsuarioMetodos.crearUsuario(user);
+            return true;
         }
 
 
