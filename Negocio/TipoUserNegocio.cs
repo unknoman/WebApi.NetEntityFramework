@@ -23,16 +23,12 @@ namespace Negocio
         }
 
         // agregar en main 
-        public static bool eliminarTipo(Tipouser tipo)
+        public static bool  eliminarTipo(int id)
         {
-            if(tipo != null)
-            {
-               return tiposUserMetodos.eliminarTipo(tipo);
-            }
+            if(id != null)
+               return tiposUserMetodos.eliminarTipo(id);
             else
-            {
                 return false;
-            }
             
         }
 

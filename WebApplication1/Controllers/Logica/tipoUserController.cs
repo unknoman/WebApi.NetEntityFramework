@@ -43,9 +43,9 @@ namespace WebApiEma.Controllers.Logica
         
         [HttpDelete]
         [Route("eliminartipo")]
-        public dynamic eliminarTipo(Tipouser tipoRol)
+        public dynamic eliminarTipo(int id)
         {
-            return TipoUserNegocio.eliminarTipo(tipoRol);
+            return TipoUserNegocio.eliminarTipo(id);
         }
     }
 }

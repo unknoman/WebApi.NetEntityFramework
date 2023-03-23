@@ -6,7 +6,7 @@ using WebApplication1.Modelos;
 
 namespace Datos
 {
-    public static class tiposUserMetodos
+    public class tiposUserMetodos
     {
 
 
@@ -59,11 +59,13 @@ namespace Datos
         }
 
 
-        public static bool eliminarTipo(Tipouser tipo)
+        public static bool eliminarTipo(int id)
         {
             using (ApiEmaContext db = new ApiEmaContext())
             {
-                db.Remove(tipo);
+                Tipouser tipouser = new Tipouser();
+                tipouser.Idtipo = id;
+                db.Remove(tipouser);
                 db.SaveChanges();
                 return true;
             }
