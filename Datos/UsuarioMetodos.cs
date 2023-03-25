@@ -62,12 +62,15 @@ namespace Datos
         }
 
 
-        public static bool actualizarUsuario(Usuario user)
+        public static bool actualizarUsuario(UsuarioCrear user)
         {
             using (ApiEmaContext db = new ApiEmaContext())
             {
                 Usuario usuario = new Usuario();
-                usuario = user;
+                usuario.Idusuario = user.Idusuario;
+                usuario.Usuario1 = user.Usuario1;
+                usuario.Password = user.Password;
+                usuario.Idtipo=user.Idtipo;
                 db.Update(usuario);
                 db.SaveChanges();
                 return true;
