@@ -8,9 +8,6 @@ namespace Datos
 {
     public class tiposUserMetodos
     {
-
-
-
         //---
 
         public static Tipouser listarTipo(int id)
