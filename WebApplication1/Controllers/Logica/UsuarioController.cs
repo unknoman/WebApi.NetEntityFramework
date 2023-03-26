@@ -23,8 +23,7 @@ namespace WebApplication1.Controllers.Logica
         [Route("crear")]
         public dynamic crearUsuario(UsuarioCrear user)
         {
-            bool resultado = UsuarioNegocio.crearUsuario(user);
-            return resultado;
+            return UsuarioNegocio.crearUsuario(user);
         }
 
 
@@ -32,16 +31,14 @@ namespace WebApplication1.Controllers.Logica
         [Route("borrar")]
         public dynamic borrarUsuario(int id)
         {
-            bool resultado = UsuarioNegocio.borrarUsuario(id);
-            return resultado;
+            return UsuarioNegocio.borrarUsuario(id);
         }
 
         [HttpPut]
         [Route("actualizar")]
         public dynamic actualizarUsuario(UsuarioCrear user)
         {
-            bool resultado = UsuarioNegocio.actualizarUsuario(user);
-            return resultado;
+        return UsuarioNegocio.actualizarUsuario(user);
         }
        
      
