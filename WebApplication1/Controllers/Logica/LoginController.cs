@@ -20,8 +20,8 @@ namespace WebApiEma.Controllers.Logica
         [Route("login")]
         public dynamic Login(LoginDTO login)
         {
-            LoginNegocio loginNegocio = new LoginNegocio(_configuration);
-            return loginNegocio;
+
+            return LoginNegocio.login(login, _configuration);
         }
     }
 

@@ -18,10 +18,10 @@ namespace Negocio
     {
         _configuration = configuration;
     }
-       
-    
 
-    public static dynamic login(LoginDTO login)
+
+
+        public static dynamic login(LoginDTO login, IConfiguration _configuration)
     {
         var usuario = LoginMetodos.login(login);
         if (usuario == null)
@@ -50,6 +50,7 @@ namespace Negocio
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.SecretKey));
             var SigIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
             var token = new JwtSecurityToken(
                 jwt.Issuer,
                 jwt.Audience,
