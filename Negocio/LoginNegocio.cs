@@ -21,7 +21,7 @@ namespace Negocio
        
     
 
-    public dynamic login(LoginDTO login)
+    public static dynamic login(LoginDTO login)
     {
         var usuario = LoginMetodos.login(login);
         if (usuario == null)
