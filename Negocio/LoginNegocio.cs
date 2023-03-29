@@ -13,14 +13,6 @@ namespace Negocio
     public class LoginNegocio
     {
 
-    private IConfiguration _configuration;
-    public LoginNegocio(IConfiguration configuration)
-    {
-        _configuration = configuration;
-    }
-
-
-
         public static dynamic login(LoginDTO login, IConfiguration _configuration)
     {
         var usuario = LoginMetodos.login(login);
@@ -38,14 +30,11 @@ namespace Negocio
 
             var claims = new[]
             {
-
-                    new Claim(JwtRegisteredClaimNames.Sub, jwt.Subject),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                     new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
-                    new Claim(JwtRegisteredClaimNames.Sub, jwt.Subject),
-                    new Claim("id", usuario.Idusuario.ToString()),
+                    new Claim(JwtRegisteredClaimNames.Sub, usuario.Idusuario.ToString()),
                     new Claim("usuario", usuario.Usuario1),
-                    new Claim("idTipo", usuario.Idtipo.ToString()),
+                    new Claim("rol", usuario.Idtipo.ToString()),
                 };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.SecretKey));
